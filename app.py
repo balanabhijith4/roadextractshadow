@@ -46,8 +46,7 @@ if uploaded_file is not None:
     with col2:
         st.markdown('<p style="text-align: center;">After Minimizing shadow</p>',unsafe_allow_html=True)
         mat=cv2.imread(uploaded_file.name)
-        print(mat)
         shad = shadow_remove(mat)
-        cv2.imwrite('img/after_shadow_remove1.jpg', shad)
-        im2=Image.open('img/after_shadow_remove1.jpg')
+        cv2.imwrite('after_shadow_remove1.jpg', shad)
+        im2=Image.open('after_shadow_remove1.jpg')
         st.image(im2,width=300)
